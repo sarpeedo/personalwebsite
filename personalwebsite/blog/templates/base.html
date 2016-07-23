@@ -1,0 +1,82 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta charset="utf-8">
+	<title>Sarp</title>
+	<meta name="description" content="Ramblings of an Untrained Mind">
+	<meta name="author" content="Sarp Orgul">
+
+	<!-- Mobile Specific Metas
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+	<!-- CSS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="{% static "css/normalize.css" %}" rel="stylesheet">
+    <link href="{% static "css/skeleton.css" %}" rel="stylesheet">
+    <link href="{% static "css/custom.css" %}" rel="stylesheet">
+
+	<!-- Scripts
+  	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link href="{% static "css/github-prettify-theme.css" %}" rel="stylesheet">
+  	<script src="{% static "js/site.js" %}"></script>
+
+	<!-- Favicon
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body class="code-snippets-visible">
+
+<div class="container">
+
+	<div class="example-header">
+    	<h2 class="title">Welcome to Sarp Orgul's Personal Site</h2>
+    	<h5 class="title">Ramblings of an Untrained Mind</h2>
+    </div>
+
+
+
+	<!-- Navbar at the Top
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="navbar-spacer"></div>
+	<nav class="navbar">
+		<div class="container">
+        <ul class="navbar-list">
+        	<li class="navbar-item"><a class="navbar-link" href="#intro">Resume</a></li>
+        	<li class="navbar-item"><a class="navbar-link" href="#intro">Projects</a></li>
+        	<li class="navbar-item"><a class="navbar-link" href="#intro">Biography</a></li>
+        	<li class="navbar-item-right"><a class="navbar-link" href="#intro">Contact</a></li>
+        	<li class="navbar-item-right"><a class="navbar-link" href="#intro">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    {% block blog_entries %}Blog Entries{% endblock %}
+
+	<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="row">
+		<div class="one-half column" style="margin-top: 5%">
+			<h4>Basic Blog Post Page</h4>
+			<p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+   		</div>
+   	</div>
+
+</div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
