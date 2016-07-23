@@ -1,5 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+from django.views import generic
+from . import models
+
+class BlogIndex(generic.ListView):
+    queryset = models.Entry.objects.published()
+    template_name = "blog/home.html"
+    paginate_by = 2

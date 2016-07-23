@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+{% load django_markdown %}
+<!-- Main Content -->
+
+
+{% block blog_entries %}
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="container">
+        {% for object in object_list %}
+        <div class="post-preview col-lg-10 col-md-10">
+          <a href="post.html">
+            <h2 class="post-title">
+              {{ object.title }}
+            </h2>
+            <h3 class="post-subtitle">
+              {{ object.subtitle }}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by <a href="#">Sarp Orgul</a> {{ object.created }}</p>
+          {{ object.body|markdown }}
+        </div>
+        <hr>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+<!-- Pager -->
+  <ul class="pager">
+    <li class="next">
+      <a href="#">Older Posts &rarr;</a>
+    </li>
+  </ul>
+</div>
