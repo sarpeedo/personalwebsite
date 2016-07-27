@@ -1,4 +1,4 @@
-{% extends "html/base.html" %}
+{% extends "blog/base.html" %}
 {% load django_markdown %}
 <!-- Main Content -->
 
@@ -8,11 +8,12 @@
 {% for object in object_list %}
 
 <div class="row">
-	<div class="one-half column" style="margin-top: 5%">
-		<h4> {{object.title}}: {{object.subtitle}}: {{object.created}} </h4>
+	<div class="twelve columns" style="margin-top: 5%">
+		<h4> {{object.title}}: {{object.subtitle}}: {{object.created}} {{ object.tags.all|join:", " }} </h4>
 		<p> {{object.body|markdown}} </p>
 	</div>
 </div>
+
 {% endfor %}
 {% endblock %}
 
