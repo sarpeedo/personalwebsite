@@ -18,8 +18,14 @@ from django.contrib import admin
 from home import views
 
 urlpatterns = [
-    url(r'^$', 'home.views.index'),
     url(r'^blog/', include('blog.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^markdown/', include('django_markdown.urls')),
+
+    url(r'^$', 'home.views.index'),
+    url(r'^resume/', 'home.views.resume'),
+    url(r'^projects/', 'home.views.projects'),
+    url(r'^biography/', 'home.views.biography'),
+    url(r'^contact/', 'home.views.contact'),
+
 ]
