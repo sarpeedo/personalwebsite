@@ -1,0 +1,10 @@
+Deploying this site
+-------------------
+
+The repository root contains a static website (HTML + CSS). No build step.
+
+  - Open index.html in a browser for local preview.
+  - Upload the repository contents (preserving css/) to GitHub Pages, Netlify, Cloudflare Pages, or any static host.
+  - For GitHub Pages, publish from the repository root or copy these files into a /docs folder if you use that convention.
+
+The legacy Django project has been removed; only these static files are required.
